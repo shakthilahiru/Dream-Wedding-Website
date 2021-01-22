@@ -268,7 +268,8 @@ a.back-to-top:hover,a.back-to-top:focus{text-decoration:none}
 .page-header .breadcrumb-wrapper .product-title{font-size:30px;
        line-height:38px;
        font-weight:700;
-       letter-spacing:1px;
+       font-family: 'Aladin', cursive;
+       letter-spacing:6px;
        color:#fff}
 
 .page-header .breadcrumb-wrapper .breadcrumb{font-size:14px;
@@ -2991,6 +2992,7 @@ footer .menu li a{color:#bfbfbf;
 #site_logo {
 	color:#0DA3D6;
        font-size: 48px;
+       font-weight: bold;
        font-family: 'Tangerine',serif;
 }
 

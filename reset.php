@@ -30,6 +30,7 @@ require 'constants/verify_token.php';
 <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
 <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 <link rel="icon" href="assets/icon/favicon.ico">
 </head>
 <body>

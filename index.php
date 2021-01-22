@@ -87,7 +87,7 @@ require 'constants/check-login.php';
 <span class="lni-menu"></span>
 <span class="lni-menu"></span>
 </button>
-<a id="site_logo"  class="navbar-brand">Dream Wedding</a>
+<a id="site_logo"  class="navbar-brand"><?php echo $site_title; ?></a>
 </div>
 <div class="collapse navbar-collapse" id="main-navbar">
 <ul class="navbar-nav mr-auto w-100 justify-content-center">
