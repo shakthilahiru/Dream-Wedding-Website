@@ -1,22 +1,23 @@
 <?php
 require '../constants/config.php';
 require '../constants/check-login.php';
+require 'constants/fetch-my-info.php';
 
 if ($logged == "1") {
-	   if ($myrole == "sup") {
+     if ($myrole == "sup") {
 
-	   }else{
+     }else{
 
-	   	header("location:../");
+      header("location:../");
 
-	   }
+     }
 
-	}else{
+  }else{
 
-		header("location:../");
+    header("location:../");
 
-	}
-
+  }
+  
 if (isset($_GET['page'])) {
 $page = $_GET['page'];
 if ($page=="" || $page=="1")
@@ -59,17 +60,96 @@ $page = 1;
 <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 
 <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="icon" href="../assets/icon/favicon.ico">
 </head>
 <body>
 
-<div class="page-header-user" >
+<header id="header-wrap">
+
+<div class="top-bar">
+<div class="container">
+<div class="row">
+<div class="col-lg-7 col-md-5 col-xs-12">
+
+<ul class="list-inline">
+<li><a style="padding-top:5px;" class="header-top-button"><i class="lni-envelope"></i><?php echo $site_email; ?></a></li>
+</ul>
+
+</div>
+<div class="col-lg-5 col-md-7 col-xs-12">
+
+<div class="header-top-right float-right">
+  <?php
+  if ($logged == "1") {
+    ?>
+    <a href="./" class="header-top-button"><i class="lni-user"></i> My Account</a> |
+       <a href="../logout" class="header-top-button"><i class="lni-enter"></i> Log Out</a>
+       <?php
+
+  }else{
+
+    ?>
+    <a href="../login" class="header-top-button"><i class="lni-lock"></i> Log In</a> |
+       <a href="../register" class="header-top-button"><i class="lni-pencil"></i> Register</a>
+   <?php
+
+  }
+
+  ?>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg bg-white fixed-top scrolling-navbar">
+<div class="container">
+
+<div class="navbar-header">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+<span class="lni-menu"></span>
+<span class="lni-menu"></span>
+<span class="lni-menu"></span>
+</button>
+
+
+</div>
+</div>
+<nav class="navbar navbar-expand-lg bg-white fixed-top scrolling-navbar">
+<div class="container">
+
+<div class="navbar-header">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+<span class="lni-menu"></span>
+<span class="lni-menu"></span>
+<span class="lni-menu"></span>
+</button>
+
+
+
+</nav>
+
+</header>
+
+
+
+<div class="page-header" >
 <div class="container">
 <div class="row">
 <div class="col-md-12">
 <div class="breadcrumb-wrapper">
-<h2 class="product-title">My Active Ads</h2>
+<h2 class="product-title">My Account</h2>
 <ol class="breadcrumb">
+<li><a href="../">Home /</a></li>
+<li class="current" style="color:white">My Account</li>
 </ol>
 </div>
 </div>

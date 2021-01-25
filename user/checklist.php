@@ -29,7 +29,7 @@ if ($logged == "1") {
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title><?php echo $site_title; ?> - Budget</title>
+<title><?php echo $site_title; ?> - Checklist</title>
 
 <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
 
@@ -98,10 +98,10 @@ if ($logged == "1") {
 <div class="row">
 <div class="col-md-12">
 <div class="breadcrumb-wrapper">
-<h2 class="product-title">Budget</h2>
+<h2 class="product-title">Checklist</h2>
 <ol class="breadcrumb">
 <li><a href="../">Home /</a></li>
-<li class="current" style="color:white">Budget</li>
+<li class="current" style="color:white">Check List</li>
 </ol>
 </div>
 </div>
@@ -142,21 +142,21 @@ if ($logged == "1") {
 <nav class="navdashboard">
 <ul>
 <li>
-<a href="./">
+<a  href="./">
 <i class="lni-user"></i>
 <span>My Account</span>
 </a>
 </li>
        
 <li>
-<a href="checklist.php">
+<a class="active" href="checklist.php">       
 <i class="lni-list"></i>
 <span>Checklist</span>
 </a>
-</li>
-       
+</li>       
+
 <li>
-<a class="active" href="budget.php">
+<a href="budget.php">
 <i class="lni-pie-chart"></i>
 <span>Budget</span>
 </a>
@@ -178,14 +178,12 @@ if ($logged == "1") {
 <div class="page-content">
 <div class="inner-box">
 <div class="dashboard-box">
-<h2 class="dashbord-title">Budget</h2>
+<h2 class="dashbord-title">Checklist</h2>
 </div>
 <div class="dashboard-wrapper">
 <?php require 'constants/check_reply.php'; ?>
 <table class="table table-responsive dashboardtable tablemyads">
 
-<tbody>
-
 
        
        
@@ -194,82 +192,115 @@ if ($logged == "1") {
        
        
        
-       
- <!DOCTYPE html>
-<html lang="en-US">
+<?php 
+require 'db_conn.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
+    <div class="main-section">
+       <div class="add-section">
+          <form action="app/add.php" method="POST" autocomplete="off">
+             <?php if(isset($_GET['mess']) && $_GET['mess'] == 'error'){ ?>
+                <input type="text" 
+                     name="title" 
+                     style="border-color: #ff6666"
+                     placeholder="This field is required" />
+              <button type="submit">Add &nbsp; <span>&#43;</span></button>
 
+             <?php }else{ ?>
+              <input type="text" 
+                     name="title" 
+                     placeholder="What do you need to do?" />
+              <button type="submit">Add &nbsp; <span>&#43;</span></button>
+             <?php } ?>
+          </form>
+       </div>
+       <?php 
+          $todos = $conn->query("SELECT * FROM todos ORDER BY id DESC");
+       ?>
+       <div class="show-todo-section">
+            <?php if($todos->rowCount() <= 0){ ?>
+                <div class="todo-item">
+                    <div class="empty">
+                        <img src="img/f.png" width="100%" />
+                        <img src="img/Ellipsis.gif" width="80px">
+                    </div>
+                </div>
+            <?php } ?>
 
-    
-    <main>
+            <?php while($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
+                <div class="todo-item">
+                    <span id="<?php echo $todo['id']; ?>"
+                          class="remove-to-do">x</span>
+                    <?php if($todo['checked']){ ?> 
+                        <input type="checkbox"
+                               class="check-box"
+                               data-todo-id ="<?php echo $todo['id']; ?>"
+                               checked />
+                        <h2 class="checked"><?php echo $todo['title'] ?></h2>
+                    <?php }else { ?>
+                        <input type="checkbox"
+                               data-todo-id ="<?php echo $todo['id']; ?>"
+                               class="check-box" />
+                        <h2><?php echo $todo['title'] ?></h2>
+                    <?php } ?>
+                    <br>
+                    <small>created: <?php echo $todo['date_time'] ?></small> 
+                </div>
+            <?php } ?>
+       </div>
+    </div>
 
-      <div class="field is-horizontal mt-10">
-          <div class="margin-auto has-text-centered">
-            <div class="select mt-10">
-              <select id="amount-type">
-                <option value="music">Music</option>
-                <option value="car">Car</option>
-              </select>   
-            </div>
-            <input class="input width-300 mt-10" id="description" type="text" placeholder="Add Description">
-            <input class="input width-150 mt-10" id="amount" type="number" placeholder="Enter Amount"> 
-            <button class="button is-black is-inverted is-outlined mt-10" id="add-btn">Add To Budget</button>
-          </div>
-      </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
 
-      <div class="columns">
+    <script>
+        $(document).ready(function(){
+            $('.remove-to-do').click(function(){
+                const id = $(this).attr('id');
+                
+                $.post("app/remove.php", 
+                      {
+                          id: id
+                      },
+                      (data)  => {
+                         if(data){
+                             $(this).parent().hide(600);
+                         }
+                      }
+                );
+            });
 
-          <div class="column is-5">
-
-            <div class="box lg-navy width-300 has-text-white margin-auto my-30 padding-24">
-              
-              <div class="columns is-mobile">
-                <div class="column has-text-left">Total Music</div>
-                <div id="total-music" class="column"></div>
-              </div>
-      
-              <div class="columns is-mobile">
-                <div class="column has-text-left">Total Car</div>
-                <div id="total-car" class="column is-4"></div>
-                <div class="column is-2" id="total-percentage"></div>
-              </div>
-
-              <div class="columns is-mobile">
-                <div class="column has-text-left">Balance</div>
-                <div id="total-budget" class="column"></div>
-              </div>
-
-            </div>
-
-            <div id="pie-chart" class="lg-silver-blue br-6 padding-8">
-              <canvas id="myChart" width="300" height="300"></canvas>
-            </div>
-
-          </div>
-
-        <div class="column is-7" id="lists-container">
-          
-          <div class="columns my-30 has-text-centered">
-            <div class="column word-break lg-navy has-text-white margin-20 br-6">
-              <h2 class="has-text-left-mobile has-text-weight-semibold">Music</h2>
-              <div id="list-music" class="mb-10"></div>
-            </div>
-            <div class="column word-break lg-navy has-text-white margin-20 br-6">
-              <h2 class="has-text-left-mobile has-text-weight-semibold">Car</h2>
-              <div id="list-car" class="mb-10"></div>
-            </div>
-          </div>
-
-          
-
-        </div>
-
-      </div>
-    </main>
-    <script src="js/app.js"></script>
-
+            $(".check-box").click(function(e){
+                const id = $(this).attr('data-todo-id');
+                
+                $.post('app/check.php', 
+                      {
+                          id: id
+                      },
+                      (data) => {
+                          if(data != 'error'){
+                              const h2 = $(this).next();
+                              if(data === '1'){
+                                  h2.removeClass('checked');
+                              }else {
+                                  h2.addClass('checked');
+                              }
+                          }
+                      }
+                );
+            });
+        });
+    </script>
 </body>
-</html>      
+</html>
        
        
        
@@ -278,11 +309,7 @@ if ($logged == "1") {
        
        
        
-       
-       
-       
-       
-       
+     
        
        
        
@@ -301,6 +328,23 @@ if ($logged == "1") {
 <div class="loader" id="loader-1"></div>
 </div>
 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
 <script src="../assets/js/jquery-min.js"></script>
 <script src="../assets/js/popper.min.js"></script>

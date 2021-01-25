@@ -25,8 +25,14 @@ require 'constants/check-login.php';
 
 <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
 
 <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 <link rel="icon" href="assets/icon/favicon.ico">

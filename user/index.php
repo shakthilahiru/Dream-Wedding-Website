@@ -46,6 +46,10 @@ if ($logged == "1") {
 <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 
 <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="icon" href="../assets/icon/favicon.ico">
 </head>
 <body>
@@ -100,80 +104,12 @@ if ($logged == "1") {
 <span class="lni-menu"></span>
 <span class="lni-menu"></span>
 </button>
-<a id="site_logo"  class="navbar-brand"><?php echo $site_title; ?></a>
-</div>
-<div class="collapse navbar-collapse" id="main-navbar">
-<ul class="navbar-nav mr-auto w-100 justify-content-center">
-<li class="nav-item">
-<a class="nav-link" href="../">
-Home
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="../listings">
-Listings
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="../gallery">
-Gallery
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="../contact">
-Contact
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="../about">
-About
-</a>
-</li>
 
-</ul>
-<div class="post-btn">
-    <?php
-	if ($logged == "1") {
-		print '<a class="btn btn-common" href="upload"><i class="lni-pencil-alt"></i> Post an Ad</a>';
-
-		}else{
-
-		print '<a class="btn btn-common" href="login"><i class="lni-lock"></i> Login to Post</a>';
-
-		}
-
-      ?>
 
 </div>
 </div>
-</div>
 
-<ul class="mobile-menu">
-<li>
-<a class="" href="../">
-Home
-</a>
-<li>
-<a href="../listings">
-Listings
-</a>
-<li>
-<li>
-<a  href="../gallery">
-Gallery
-</a>
-<li>
-<li>
-<a href="../contact">
-Home
-</a>
-<li>
-<li>
-<a class="about" href="../about">
-About
-</a>
-<li>
-</ul>
+
 
 </nav>
 
@@ -238,12 +174,21 @@ About
 </li>
 
 <li>
-<a href="myads">
+<a href="checklist.php">
+<i class="lni-list"></i>
+<span>Checklist</span>
+</a>
+</li>       
+
+<li>
+<a href="budget.php">
 <i class="lni-pie-chart"></i>
 <span>Budget</span>
 </a>
 </li>
-     
+
+
+       
 <li>
 <a href="../logout">
 <i class="lni-enter"></i>

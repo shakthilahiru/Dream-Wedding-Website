@@ -36,6 +36,9 @@ if ($logged == "1") {
     <link rel="icon" href="../assets/icon/favicon.ico">
         <link rel="stylesheet" href="summernote/dist/summernote.css" />
     <link rel="stylesheet" href="summernote/dist/summernote-bs3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
 
 
 </head>
