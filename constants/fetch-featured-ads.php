@@ -34,7 +34,7 @@ try {
 
 </div>
 <div class="product-content">
-<h3 class="product-title list-limit-featured"><a href="ad/<?php echo $row['ad_id']; ?>"><?php echo $row['title']; ?></a></h3>
+<h3 class="product-title list-limit-featured"><a href="ad/<?php echo $row['ad_id']; ?>"></a></h3>
 <span><?php echo $row['category']; ?></span>
 <div class="icon">
 		<?php

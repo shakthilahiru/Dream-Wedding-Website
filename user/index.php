@@ -238,12 +238,21 @@ About
 </li>
 
 <li>
-<a href="myads">
+<a href="checklist.php">
+<i class="lni-list"></i>
+<span>Checklist</span>
+</a>
+</li>       
+
+<li>
+<a href="budget.php">
 <i class="lni-pie-chart"></i>
 <span>Budget</span>
 </a>
 </li>
-     
+
+
+       
 <li>
 <a href="../logout">
 <i class="lni-enter"></i>
