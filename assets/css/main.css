@@ -263,7 +263,7 @@ a.back-to-top:hover,a.back-to-top:focus{text-decoration:none}
        left:0;
        width:100%;
        height:100%;
-       background:rgba(54,59,77,.88)}
+       background:rgba(54,59,77,.30)}
 
 .page-header .breadcrumb-wrapper .product-title{font-size:30px;
        line-height:38px;
@@ -293,7 +293,7 @@ a.back-to-top:hover,a.back-to-top:focus{text-decoration:none}
        left:0;
        width:100%;
        height:40%;
-       background:rgba(54,59,77,.88)}
+       background:rgba(54,59,77,.30)}
 
 .page-header-user .breadcrumb-wrapper .product-title{font-size:30px;
        line-height:38px;
@@ -532,7 +532,8 @@ a.back-to-top:hover,a.back-to-top:focus{text-decoration:none}
        top:0;
        left:0;
        width:100%;
-       height:100%;background:rgba(0,0,0,0.5)}
+       height:100%;
+       background:rgba(0,0,0,0.5)}
 
 #hero-area .contents{padding:150px 0 240px}
 #hero-area .contents .head-title{color:#fff;
@@ -3070,3 +3071,27 @@ object-fit:cover;
    -webkit-box-orient: vertical;
 }
 
+
+
+
+
+/*Parallax image Section*/
+
+.parallaxhome{
+	background: url('../img/Parallax-home.jpg.jpg') center no-repeat fixed;
+	background-size: cover;
+	height: 400px;
+}
+	
+
+.parallaxhome h1{
+	padding-top: 100px;
+	text-align: center;
+	color: #f2f2f2;
+	text-transform: uppercase;
+	font-family: Roboto;
+	font-size: 55px;
+	font-weight: normal;       
+}
+
+/*Parallax image Section*/

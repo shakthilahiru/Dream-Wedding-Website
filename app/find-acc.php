@@ -10,8 +10,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	
-	$stmt = $conn->prepare("SELECT email, username, role FROM tbl_admin WHERE username = :user OR email = :user
-		UNION SELECT email, username, role FROM tbl_sup WHERE username = :user OR email = :user UNION SELECT email, username, role FROM tbl_user WHERE username = :user OR email = :user");
+	$stmt = $conn->prepare("SELECT email, username, role FROM tbl_admin WHERE username = :user OR email = :user UNION SELECT email, username, role FROM tbl_sup WHERE username =:user OR email = :user UNION SELECT email, username, role FROM tbl_user WHERE username = :user OR email = :user");
 	$stmt->bindParam(':user', $myuser);
 	$stmt->execute();
 	$result = $stmt->fetchAll();

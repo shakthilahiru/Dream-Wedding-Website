@@ -130,8 +130,8 @@ if ($preview_allowed == "YES") {
 		?>
 		
        		
-       <a href="register" class="header-top-button"><i class="lni-user"></i>  ARE YOU A SUPPLIER?</a> |
-       <a href="registeruser" class="header-top-button"><i class="lni-user"></i>  ARE YOU A USER?</a>
+       <a href="../register" class="header-top-button"><i class="lni-user"></i>  ARE YOU A SUPPLIER?</a> |
+       <a href="../registeruser" class="header-top-button"><i class="lni-user"></i>  ARE YOU A USER?</a>
    <?php
 
 	}
@@ -504,6 +504,7 @@ $result = $stmt->fetchAll();
 
 
 
+
 <footer>
 
 <section class="footer-Content">
@@ -511,7 +512,7 @@ $result = $stmt->fetchAll();
 <div class="row">
 <div class="col-lg-4 col-md-4 col-xs-6 col-mb-12">
 <div class="widget">
-<h3 class="block-title">About</h3>
+<div class="footer-logo"><h3 class="block-title">About</h3></div>
 <div class="textwidget">
 <p><?php echo $about_site; ?></p>
 </div>
@@ -525,22 +526,22 @@ $result = $stmt->fetchAll();
 </div>
 <div class="col-lg-4 col-md-4 col-xs-6 col-mb-12">
 <div class="widget">
-<h3 class="block-title">Quick Links</h3>
+<h3 class="block-title">Quick Link</h3>
 <ul class="menu">
-<li><a href="../">- Home</a></li>
-<li><a href="../listings">- Listings</a></li>
-<li><a href="../gallery">- Gallery</a></li>
-<li><a href="../contact">- Contact</a></li>
-<li><a href="../About">- About</a></li>
-<li><a href="https://www.instagram.com/beatsbybwire/">- Developer</a></li>
+<li><a href="./">- Home</a></li>
+<li><a href="listings">- Listings</a></li>
+<li><a href="gallery">- Gallery</a></li>
+<li><a href="contact">- Contact</a></li>
+<li><a href="About">- About</a></li>
+
     <?php
 	if ($logged == "1") {
-print '<li><a href="./">- My Account</a></li>
-       <li><a href="../logout">- Log Out</a></li>';
+print '<li><a href="'.$myrole.'">- My Account</a></li>
+       <li><a href="logout">- Log Out</a></li>';
 
 	}else{
-print '<li><a href="../login">- Login</a></li>
-       <li><a href="../register">- Register</a></li>';
+print '<li><a href="login">- Login</a></li>
+       <li><a href="register">- Register</a></li>';
 
 	}
 

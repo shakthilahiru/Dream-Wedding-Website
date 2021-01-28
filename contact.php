@@ -230,7 +230,7 @@ Send us a message
 </div>
  </div>
 <div class="col-md-12">
-<button type="submit"  class="btn btn-common">Submit Now</button>
+<button type="submit"  class="btn btn-common">Send Now</button>
 <div id="msgSubmit" class="h3 text-center hidden"></div>
 <div class="clearfix"></div>
 </div>

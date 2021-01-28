@@ -193,97 +193,248 @@ if ($logged == "1") {
        
        
        
-       
-       
- <!DOCTYPE html>
-<html lang="en-US">
+<head>       
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 30px;
+  height: 50px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 35%;
+}
+
+.right {
+  width: 4S5%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
 <body>
 
 
-    
-    <main>
+<div class="row">
+  <div class="column left">
 
-      <div class="field is-horizontal mt-10">
-          <div class="margin-auto has-text-centered">
-            <div class="select mt-10">
-              <select id="amount-type">
-                <option value="music">Music</option>
-                <option value="car">Car</option>
-              </select>   
-            </div>
-            <input class="input width-300 mt-10" id="description" type="text" placeholder="Add Description">
-            <input class="input width-150 mt-10" id="amount" type="number" placeholder="Enter Amount"> 
-            <button class="button is-black is-inverted is-outlined mt-10" id="add-btn">Add To Budget</button>
-          </div>
-      </div>
+	<title>Budget</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-      <div class="columns">
+<body>
+<div class="container">
+	<h4>Category</h4>
+<hr>
+<form method="post" action="checkbox-db.php">
+<table class="table table-bordered">
+	
+		
+	
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
-          <div class="column is-5">
+	<tbody>
+		<br>
+			<input type="checkbox" name="prodid[]" value="Reception">
+			Reception
+				<input type="hidden" name="prodname[]" value="Reception">
+			
+			
+		<br>
+			<input type="checkbox" name="prodid[]" value="Catering">
+			Catering
+				<input type="hidden" name="prodname[]" value="Catering">
+			
+		<br>	
+		
+		
+			<input type="checkbox" name="prodid[]" value="Photography &amp; Vedio">
+			Photography &amp; Vedio
+				<input type="hidden" name="prodname[]" value="Photography &amp; Vedio">
+			
+		<br>
+			<input type="checkbox" name="prodid[]" value="Music">
+			Music
+				<input type="hidden" name="prodname[]" value="Music">
+			
+			
+		<br>
+			<input type="checkbox" name="prodid[]" value="Cultural Ceremonies">
+			Cultural Ceremonies
+				<input type="hidden" name="prodname[]" value="Cultural Ceremonies">
+			
+		<br>	
+		
+		
+			<input type="checkbox" name="prodid[]" value="Wedding Car">
+			Wedding Car
+				<input type="hidden" name="prodname[]" value="Wedding Car">	
+       <br>    
+           
+       	<input type="checkbox" name="prodid[]" value="Wedding Invitation">
+			Wedding Invitation
+				<input type="hidden" name="prodname[]" value="Wedding Invitation">
+			
+			
+		<br>
+			<input type="checkbox" name="prodid[]" value="Flowers &amp; Decoration">
+			Flowers &amp; Decoration
+				<input type="hidden" name="prodname[]" value="Flowers &amp; Decoration">
+			
+		<br>	
+		
+		
+			<input type="checkbox" name="prodid[]" value="Entertainment">
+			Entertainment
+				<input type="hidden" name="prodname[]" value="Entertainment">
+           
+       <br>    
+           
+       	<input type="checkbox" name="prodid[]" value="Wedding Cakes">
+			Wedding Cakes
+				<input type="hidden" name="prodname[]" value="Wedding Cakes">
+			
+			
+		<br>
+			<input type="checkbox" name="prodid[]" value="Bridal Accessories">
+			Bridal Accessories
+				<input type="hidden" name="prodname[]" value="Bridal Accessories">
+			
+		<br>	
+		
+		
+			<input type="checkbox" name="prodid[]" value="Groom's Accessories">
+			Groom's Accessories
+				<input type="hidden" name="prodname[]" value="Groom's Accessories">	 
+           
+       <br>    
+           
+       	<input type="checkbox" name="prodid[]" value="Health &amp; Beauty">
+			Health &amp; Beauty
+				<input type="hidden" name="prodname[]" value="Health &amp; Beauty">
+			
+			
+		<br>
+			<input type="checkbox" name="prodid[]" value="Jewellery">
+			Jewellery
+				<input type="hidden" name="prodname[]" value="Jewellery">
+			
+			     
+		
+	</tbody>
+</table>
+<div class="text-left">
+	<input type="submit" name="submit" class="btn btn-success" value="Submit">
+	</div>
+</div>
+</form>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-            <div class="box lg-navy width-300 has-text-white margin-auto my-30 padding-24">
-              
-              <div class="columns is-mobile">
-                <div class="column has-text-left">Total Music</div>
-                <div id="total-music" class="column"></div>
-              </div>
-      
-              <div class="columns is-mobile">
-                <div class="column has-text-left">Total Car</div>
-                <div id="total-car" class="column is-4"></div>
-                <div class="column is-2" id="total-percentage"></div>
-              </div>
 
-              <div class="columns is-mobile">
-                <div class="column has-text-left">Balance</div>
-                <div id="total-budget" class="column"></div>
-              </div>
 
-            </div>
 
-            <div id="pie-chart" class="lg-silver-blue br-6 padding-8">
-              <canvas id="myChart" width="300" height="300"></canvas>
-            </div>
 
-          </div>
 
-        <div class="column is-7" id="lists-container">
-          
-          <div class="columns my-30 has-text-centered">
-            <div class="column word-break lg-navy has-text-white margin-20 br-6">
-              <h2 class="has-text-left-mobile has-text-weight-semibold">Music</h2>
-              <div id="list-music" class="mb-10"></div>
-            </div>
-            <div class="column word-break lg-navy has-text-white margin-20 br-6">
-              <h2 class="has-text-left-mobile has-text-weight-semibold">Car</h2>
-              <div id="list-car" class="mb-10"></div>
-            </div>
-          </div>
+  </div>
+  <div class="column right">
+   <br>
+         <br>
+         <br>
+         
+         
+         
+         
+    <!doctype html public "-//w3c//dtd html 3.2//en">
 
-          
+<?Php
+require "config.php";// Database connection
 
-        </div>
+if($stmt = $connection->query("SELECT product_name FROM product")){
 
-      </div>
-    </main>
-    <script src="js/app.js"></script>
+  echo "No of records : ".$stmt->num_rows."<br>";
+$php_data_array = Array(); // create PHP array
+  echo "<table>
+<tr> <th>	product_name</th></tr>";
+while ($row = $stmt->fetch_row()) {
+   echo "<tr><td>$row[0]</td></tr>";
+   $php_data_array[] = $row; // Adding to array
+   }
+echo "</table>";
+}else{
+echo $connection->error;
+}
+//print_r( $php_data_array);
+// You can display the json_encode output here. 
+ 
 
+// Transfor PHP array to JavaScript two dimensional array 
+echo "<script>
+        var my_2d = ".json_encode($php_data_array)."
+</script>";
+?>
+
+
+<div id="chart_div"></div>
+<br><br>
+<a href=https://www.plus2net.com/php_tutorial/chart-database.php></a>
 </body>
-</html>      
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+ google.charts.load('current', {'packages':['corechart']});
+     // Draw the pie chart when Charts is loaded.
+      google.charts.setOnLoadCallback(draw_my_chart);
+      // Callback that draws the pie chart
+      function draw_my_chart() {
+        // Create the data table .
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Category');
+        
+		for(i = 0; i < my_2d.length; i++)
+    data.addRow([my_2d[i][0], parseInt(my_2d[i][1])]);
+// above row adds the JavaScript two dimensional array data into required chart format
+    var options = {title:'',
+                       width:600,
+                       height:500};
+
+        // Instantiate and draw the chart
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+</script>
+
        
        
        

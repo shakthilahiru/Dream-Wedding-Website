@@ -35,7 +35,7 @@ if (!unlink($file))
 
 	}
 
-		    $stmt = $conn->prepare("DELETE from tbl_users WHERE user_id = :userid");
+		    $stmt = $conn->prepare("DELETE from tbl_sup WHERE user_id = :userid");
 	    $stmt->bindParam(':userid', $user_id);
 	    $stmt->execute();
 

@@ -28,6 +28,7 @@ require 'constants/check-login.php';
 
 <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 
 
 
@@ -267,6 +268,20 @@ try {
 </div>
 </div>
 </section>
+       
+       
+       
+ <!-- Parallax image Section -->
+
+		<div class= "Parallax clearfix">
+			<div class="parallaxhome">
+				<h1>“The highest happiness<br> on earth is the happiness of <br>marriage.”</h1>
+			</div>	
+		</div>
+<!-- Parallax image Section -->      
+       
+       
+       
 
 
 <section class="featured-lis section-padding">
@@ -283,7 +298,6 @@ try {
 </div>
 </div>
 </section>
-
 
 
 
@@ -323,8 +337,7 @@ print '<li><a href="'.$myrole.'">- My Account</a></li>
 
 	}else{
 print '<li><a href="login">- Login</a></li>
-       <li><a href="register">- Register</a></li>
-       <li><a href="registeruser">- Register</a></li>';
+       <li><a href="register">- Register</a></li>';
 
 	}
 
