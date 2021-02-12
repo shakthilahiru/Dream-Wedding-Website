@@ -51,6 +51,9 @@ if ($logged == "1") {
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="icon" href="../assets/icon/favicon.ico">
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">       
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+       
 </head>
 <body>
 
@@ -93,13 +96,13 @@ if ($logged == "1") {
 </div>
 </div>
 
-<div class="page-header" >
+<div class="userpage-header" >
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<div class="breadcrumb-wrapper">
-<h2 class="product-title">Budget</h2>
-<ol class="breadcrumb">
+<div class="userbreadcrumb-wrapper">
+<h2 class="userproduct-title">Budget</h2>
+<ol class="userbreadcrumb">
 <li><a href="../">Home /</a></li>
 <li class="current" style="color:white">Budget</li>
 </ol>
@@ -181,259 +184,193 @@ if ($logged == "1") {
 <h2 class="dashbord-title">Budget</h2>
 </div>
 <div class="dashboard-wrapper">
-<?php require 'constants/check_reply.php'; ?>
-<table class="table table-responsive dashboardtable tablemyads">
 
-<tbody>
-
-
+<!---Container-->
+    <div class="ml-64">
+    <iframe 
+        src='' height="10" width="15" id='Budget' 
+        	frameborder='0' style='border:0;' 
+            width='500' height='300'>
+    </iframe>
+    <p>
+        <input type="button" id="bt" onclick="print()" value="Download PDF" />
+    </p>
+       </div>          
        
-       
-       
-       
-       
-       
-<head>       
- 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+<div class="Container mx-auto">
+    
 
-/* Create two unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 30px;
-  height: 50px; /* Should be removed. Only for demonstration */
-}
+	<!---Input Section-->
 
-.left {
-  width: 35%;
-}
-
-.right {
-  width: 4S5%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-</head>
-<body>
-
-
-<div class="row">
-  <div class="column left">
-
-	<title>Budget</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-<body>
-<div class="container">
-	<h4>Category</h4>
-<hr>
-<form method="post" action="checkbox-db.php">
-<table class="table table-bordered">
-	
+	<div class="mt-10">
+		<label for="enter_money" class="text-2xl block text-center">Enter Amount that you want to Manage</label>
+		<input id="enter_money" type="text" class="shadow appearence-none border border-gray-500 rounded px-5 py-2 block mx-auto mt-5">
 		
-	
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-
-	<tbody>
-		<br>
-			<input type="checkbox" name="prodid[]" value="Reception">
-			Reception
-				<input type="hidden" name="prodname[]" value="Reception">
-			
-			
-		<br>
-			<input type="checkbox" name="prodid[]" value="Catering">
-			Catering
-				<input type="hidden" name="prodname[]" value="Catering">
-			
-		<br>	
-		
-		
-			<input type="checkbox" name="prodid[]" value="Photography &amp; Vedio">
-			Photography &amp; Vedio
-				<input type="hidden" name="prodname[]" value="Photography &amp; Vedio">
-			
-		<br>
-			<input type="checkbox" name="prodid[]" value="Music">
-			Music
-				<input type="hidden" name="prodname[]" value="Music">
-			
-			
-		<br>
-			<input type="checkbox" name="prodid[]" value="Cultural Ceremonies">
-			Cultural Ceremonies
-				<input type="hidden" name="prodname[]" value="Cultural Ceremonies">
-			
-		<br>	
-		
-		
-			<input type="checkbox" name="prodid[]" value="Wedding Car">
-			Wedding Car
-				<input type="hidden" name="prodname[]" value="Wedding Car">	
-       <br>    
-           
-       	<input type="checkbox" name="prodid[]" value="Wedding Invitation">
-			Wedding Invitation
-				<input type="hidden" name="prodname[]" value="Wedding Invitation">
-			
-			
-		<br>
-			<input type="checkbox" name="prodid[]" value="Flowers &amp; Decoration">
-			Flowers &amp; Decoration
-				<input type="hidden" name="prodname[]" value="Flowers &amp; Decoration">
-			
-		<br>	
-		
-		
-			<input type="checkbox" name="prodid[]" value="Entertainment">
-			Entertainment
-				<input type="hidden" name="prodname[]" value="Entertainment">
-           
-       <br>    
-           
-       	<input type="checkbox" name="prodid[]" value="Wedding Cakes">
-			Wedding Cakes
-				<input type="hidden" name="prodname[]" value="Wedding Cakes">
-			
-			
-		<br>
-			<input type="checkbox" name="prodid[]" value="Bridal Accessories">
-			Bridal Accessories
-				<input type="hidden" name="prodname[]" value="Bridal Accessories">
-			
-		<br>	
-		
-		
-			<input type="checkbox" name="prodid[]" value="Groom's Accessories">
-			Groom's Accessories
-				<input type="hidden" name="prodname[]" value="Groom's Accessories">	 
-           
-       <br>    
-           
-       	<input type="checkbox" name="prodid[]" value="Health &amp; Beauty">
-			Health &amp; Beauty
-				<input type="hidden" name="prodname[]" value="Health &amp; Beauty">
-			
-			
-		<br>
-			<input type="checkbox" name="prodid[]" value="Jewellery">
-			Jewellery
-				<input type="hidden" name="prodname[]" value="Jewellery">
-			
-			     
-		
-	</tbody>
-</table>
-<div class="text-left">
-	<input type="submit" name="submit" class="btn btn-success" value="Submit">
+		<p id="error" class=" hidden text-red-500 text-sm italic text-center mt-3"> Please enter a valid amount</p>
 	</div>
+
+	<!---Manage Budget Section-->
+	<div id="manage_div" class="mt-s ">
+		
+		
+
+		<p id="error_manage" class="  text-red-500 text-sm italic text-center mt-10"> </p>
+
+        <div>
+	       <button id="evaluate" class="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 border-b-4 border-pink-500 hover:border-pink-400 rounded mt-10 block mx-auto">Evaluate My Money</button>
+	       	
+	      
+        </div>
+
+        <!---Loading gif image-->
+        <img id="loader" src="../assets/img/giphy.gif" class="hidden block mx-auto">
+
+        <!---show result Section-->
+        <div id="result_section" class="mt-10 hidden">
+        	<p class="text-2xl text-center font-semibold">Here's how you should manage your money</p>
+        	
+        	<div class="h-80 grid grid-flow-col grid-rows-3  sm:grid-rows-3 md:grid-rows-4 lg:grid-rows-8 xl:grid-rows-6 ">
+        		
+        		<div class="flex-grow-0 bg-blue-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Reception</h1>
+        			<p id="show_reception" class="text-white font-semibold text-2xl"></p>
+        		</div>
+
+
+        		<div class="flex-grow-0 bg-pink-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Catering</h1>
+        			<p id="show_catering" class="text-white font-semibold text-2xl"></p>
+        		</div>
+
+
+        		<div class="flex-grow-0 bg-green-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Photography &amp; Vedio</h1>
+        			<p id="show_photography" class="text-white font-semibold text-2xl"></p>
+        		</div>
+
+        		<div class="flex-grow-0 bg-purple-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Music</h1>
+        			<p id="show_music" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                   <div class="flex-grow-0 bg-blue-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Cultural Ceremonies</h1>
+        			<p id="show_cultural" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                   
+                   <div class="flex-grow-0 bg-pink-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Wedding Car</h1>
+        			<p id="show_car" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                   <div class="flex-grow-0 bg-green-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Wedding Invitation</h1>
+        			<p id="show_invitation" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                   <div class="flex-grow-0 bg-purple-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Flowers &amp; Decoration</h1>
+        			<p id="show_flowers" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                   <div class="flex-grow-0 bg-blue-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Entertainment</h1>
+        			<p id="show_entertainment" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                   <div class="flex-grow-0 bg-pink-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Wedding Cakes</h1>
+        			<p id="show_cakes" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                   <div class="flex-grow-0 bg-green-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Bridal Accessories</h1>
+        			<p id="show_bridal" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                 <div class="flex-grow-0 bg-purple-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Groom's Accessories</h1>
+        			<p id="show_grooms" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                <div class="flex-grow-0 bg-blue-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Health &amp; Beauty</h1>
+        			<p id="show_health" class="text-white font-semibold text-2xl"></p>
+        		</div>
+                   
+                <div class="flex-grow-0 bg-pink-600 shadow-lg px-6 py-4 rounded mx-2 my-2">
+        			<h1 class="font-bold text-white text-xl">Jewellery</h1>
+        			<p id="show_jewellery" class="text-white font-semibold text-2xl"></p>
+        		</div>   
+                   
+                 
+
+        	</div>
+
+        	<button id="reset_button" class="bg-red-500 hover:bd-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded mt-5 block mx-auto">  Reset</button>
+
+        </div>
+
+	</div>
+	
 </div>
-</form>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 
 
+</div>
 
 
-  </div>
-  <div class="column right">
-   <br>
-         <br>
-         <br>
-         
-         
-         
-         
-    <!doctype html public "-//w3c//dtd html 3.2//en">
-
-<?Php
-require "config.php";// Database connection
-
-if($stmt = $connection->query("SELECT product_name FROM product")){
-
-  echo "No of records : ".$stmt->num_rows."<br>";
-$php_data_array = Array(); // create PHP array
-  echo "<table>
-<tr> <th>	product_name</th></tr>";
-while ($row = $stmt->fetch_row()) {
-   echo "<tr><td>$row[0]</td></tr>";
-   $php_data_array[] = $row; // Adding to array
-   }
-echo "</table>";
-}else{
-echo $connection->error;
-}
-//print_r( $php_data_array);
-// You can display the json_encode output here. 
- 
-
-// Transfor PHP array to JavaScript two dimensional array 
-echo "<script>
-        var my_2d = ".json_encode($php_data_array)."
-</script>";
-?>
 
 
-<div id="chart_div"></div>
-<br><br>
-<a href=https://www.plus2net.com/php_tutorial/chart-database.php></a>
-</body>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script>
- google.charts.load('current', {'packages':['corechart']});
-     // Draw the pie chart when Charts is loaded.
-      google.charts.setOnLoadCallback(draw_my_chart);
-      // Callback that draws the pie chart
-      function draw_my_chart() {
-        // Create the data table .
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Category');
-        
-		for(i = 0; i < my_2d.length; i++)
-    data.addRow([my_2d[i][0], parseInt(my_2d[i][1])]);
-// above row adds the JavaScript two dimensional array data into required chart format
-    var options = {title:'',
-                       width:600,
-                       height:500};
+</div>
+</div>
+<div class="pagination-bar">
+<nav>
+<ul class="pagination justify-content-center">
+  <?php
+  try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Instantiate and draw the chart
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-</script>
+  
+    $stmt = $conn->prepare("SELECT * FROM tbl_ads WHERE author = :author ORDER BY enc_id DESC");
+    $stmt->bindParam(':author', $myid);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    $rec = count($result);
+
+    $total_pages = $rec /10;
+    $total_pages = ceil($total_pages);
+
+    if ($total_pages > 1) {
+
+        for ($b=1;$b<=$total_pages;$b++) {
+
+          print '<li class="page-item"><a class="page-link '; if ($b == $page) { print ' active '; } print '" href="myads?page='.$b.'">'.$b.'</a></li>';
+
+        }
+                                 
+
+    }
+
+            
+  }catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+
+    ?>
+
+</ul>
+</nav>
+</div>
+</div>
+
+</div>
+</div>
+</div>
 
        
        
@@ -452,7 +389,7 @@ echo "<script>
 <div class="loader" id="loader-1"></div>
 </div>
 
-
+<script type="text/javascript" src="../assets/js/app.js"></script>
 <script src="../assets/js/jquery-min.js"></script>
 <script src="../assets/js/popper.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>

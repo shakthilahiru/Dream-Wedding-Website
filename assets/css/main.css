@@ -257,6 +257,7 @@ a.back-to-top:hover,a.back-to-top:focus{text-decoration:none}
 
 
 .page-header{padding:115px 0 25px;position:relative}
+
 .page-header:before{content:'';
        position:absolute;
        top:0;
@@ -286,34 +287,35 @@ a.back-to-top:hover,a.back-to-top:focus{text-decoration:none}
 
 
 
-.page-header-user{padding:20px 0 110px;position:relative}
-.page-header-user:before{content:'';
+.userpage-header{padding:20px 0 50px;position:relative}
+.userpage-header:before{content:'';
        position:absolute;
        top:0;
        left:0;
        width:100%;
-       height:40%;
-       background:rgba(54,59,77,.30)}
+       height:100%;
+       background-color:#43464a;
+       margin-top: 1px;
+       
+}
 
-.page-header-user .breadcrumb-wrapper .product-title{font-size:30px;
+
+.userpage-header .userbreadcrumb-wrapper .userproduct-title{font-size:30px;
        line-height:38px;
-       font-weight:200;
-       letter-spacing:1px;
+       font-weight:700;
+       font-family: 'Aladin', cursive;
+       letter-spacing:6px;
        color:#fff}
 
-.page-header-user .breadcrumb-wrapper .breadcrumb{font-size:14px;
-       color:#0DA3D6;
-       border-radius:0;
+.userpage-header .userbreadcrumb-wrapper .userbreadcrumb{font-size:14px;
+       color:#0DA3D6;border-radius:0;
        background:0 0;
        padding:5px 0;
        z-index:1}
 
-.page-header-user .breadcrumb-wrapper .breadcrumb li{display:inline-block}
-.page-header-user .breadcrumb-wrapper .breadcrumb li a{color:#fff;
+.userpage-header .userbreadcrumb-wrapper .userbreadcrumb li{display:inline-block}
+.userpage-header .userbreadcrumb-wrapper .userbreadcrumb li a{color:#fff;
        padding-right:5px}
-
-
-
 
 
 

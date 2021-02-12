@@ -24,12 +24,12 @@ $mail->Password = $smtp_pass;
 $mail->SMTPSecure = 'tls';                   
 $mail->Port = 587;   
 
-$mail->setFrom($sendermail, $site_title);
+$mail->setFrom($sendermail,$site_title);
 $mail->addAddress($receiver_mail);  
 
 $mail->isHTML(true); 
 
-$mail->Subject = ''.$title.'';
+$mail->Subject = $title;
 $mail->Body    = $msgtosend;
 $mail->AltBody = '';
 

@@ -93,15 +93,15 @@ if ($logged == "1") {
 </div>
 </div>
 
-<div class="page-header" >
+<div class="userpage-header" >
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<div class="breadcrumb-wrapper">
-<h2 class="product-title">Checklist</h2>
-<ol class="breadcrumb">
+<div class="userbreadcrumb-wrapper">
+<h2 class="userproduct-title">checklist</h2>
+<ol class="userbreadcrumb">
 <li><a href="../">Home /</a></li>
-<li class="current" style="color:white">Check List</li>
+<li class="current" style="color:white">Check list</li>
 </ol>
 </div>
 </div>

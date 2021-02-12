@@ -296,7 +296,9 @@ print '
 </div>
 <div class="details-box">
 <div class="ads-details-info">
+       <h2><?php echo $title; ?></h2>
 <div class="details-meta">
+       
 <span><a><i class="lni-alarm-clock"></i> <?php echo $post_date; ?></a></span>
 <span><a><i class="lni-map-marker"></i> <?php echo $city; ?></a></span>
 <span><a>Fixed Price : <strong> <?php echo $fixed; ?></strong></a></span>
@@ -360,7 +362,7 @@ print '
 </div>
 <div class="agent-details">
 <h3><a href="#"><?php echo $author; ?> <?php if ($verified == "YES") { print '<span class="lni-check-mark-circle"></span>'; } ?></a></h3>
-<span><i class="lni-envelope"></i><?php echo $email; ?></span>
+       
 </div>
 </div>
 <?php

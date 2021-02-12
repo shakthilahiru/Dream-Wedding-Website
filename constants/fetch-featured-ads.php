@@ -5,7 +5,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	
-	$stmt = $conn->prepare("SELECT * FROM tbl_ads LEFT JOIN tbl_user on tbl_ads.author = tbl_user.user_id WHERE tbl_ads.status = 'active' AND tbl_ads.featured = 'yes' ORDER BY enc_id DESC");
+	$stmt = $conn->prepare("SELECT * FROM tbl_ads LEFT JOIN tbl_sup on tbl_ads.author = tbl_sup.user_id WHERE tbl_ads.status = 'active' AND tbl_ads.featured = 'yes' ORDER BY enc_id DESC");
 	$stmt->execute();
 	$result = $stmt->fetchAll();
 
@@ -34,7 +34,7 @@ try {
 
 </div>
 <div class="product-content">
-<h3 class="product-title list-limit-featured"><a href="ad/<?php echo $row['ad_id']; ?>"></a></h3>
+<h3 class="product-title list-limit-featured"><a href="ad/<?php echo $row['ad_id']; ?>"><?php echo $row['title']; ?></a></h3>
 <span><?php echo $row['category']; ?></span>
 <div class="icon">
 		<?php

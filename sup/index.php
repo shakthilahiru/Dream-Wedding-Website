@@ -140,13 +140,13 @@ $page = 1;
 
 
 
-<div class="page-header" >
+<div class="userpage-header" >
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<div class="breadcrumb-wrapper">
-<h2 class="product-title">My Account</h2>
-<ol class="breadcrumb">
+<div class="userbreadcrumb-wrapper">
+<h2 class="userproduct-title">My Account</h2>
+<ol class="userbreadcrumb">
 <li><a href="../">Home /</a></li>
 <li class="current" style="color:white">My Account</li>
 </ol>

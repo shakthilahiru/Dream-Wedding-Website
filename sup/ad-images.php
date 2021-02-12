@@ -64,13 +64,13 @@ if ($logged == "1") {
 <body>
 
 
-<div class="page-header-user" >
+<div class="userpage-header-user" >
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<div class="breadcrumb-wrapper">
-<h2 class="product-title">Manage Ad Images</h2>
-<ol class="breadcrumb">
+<div class="userbreadcrumb-wrapper">
+<h2 class="userproduct-title">Manage Ad Images</h2>
+<ol class="userbreadcrumb">
 </ol>
 </div>
 </div>

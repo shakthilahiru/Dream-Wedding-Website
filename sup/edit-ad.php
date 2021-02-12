@@ -65,13 +65,13 @@ if ($logged == "1") {
 
 
 
-<div class="page-header-user" >
+<div class="userpage-header" >
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<div class="breadcrumb-wrapper">
-<h2 class="product-title">Edit <?php echo $title; ?></h2>
-<ol class="breadcrumb">
+<div class="userbreadcrumb-wrapper">
+<h2 class="userproduct-title">Edit <?php echo $title; ?></h2>
+<ol class="userbreadcrumb">
 <li class="current" style="color:white">Edit <?php echo $title; ?></li>
 </ol>
 </div>

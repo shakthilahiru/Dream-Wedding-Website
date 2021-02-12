@@ -42,7 +42,7 @@ try {
 <div class="product">
 <a ><?php echo $row['category']; ?></a>
 </div>
-<h4 class="list-limit"><a href="ad/<?php echo $row['ad_id']; ?>"></a></h4>
+<h4 class="list-limit"><a href="ad/<?php echo $row['ad_id']; ?>"><?php echo $row['title']; ?></a></h4>
 <div class="meta-tag">
 <span>
 <a ><i class="lni-user"></i> <?php echo $row['username']; ?>

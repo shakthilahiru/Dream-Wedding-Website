@@ -9,7 +9,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	
-$stmt = $conn->prepare("SELECT * FROM tbl_ads LEFT JOIN tbl_user ON tbl_ads.author = tbl_user.user_id WHERE tbl_ads.ad_id = :adid");
+$stmt = $conn->prepare("SELECT * FROM tbl_ads LEFT JOIN tbl_sup ON tbl_ads.author = tbl_sup.user_id WHERE tbl_ads.ad_id = :adid");
 $stmt->bindParam(':adid', $ad_id);
 $stmt->execute();
 $result = $stmt->fetchAll();
